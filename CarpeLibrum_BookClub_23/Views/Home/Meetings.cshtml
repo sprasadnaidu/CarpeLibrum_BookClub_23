@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Meetings";
+}
+
+<h1 class="text-center">Meetings Room</h1>
+
+<h3>Book a room:</h3>
+
+<table class="center-block table-responsive" width="900px">
+    <tr>
+        <td style="padding: 10px 10px 10px 10px">
+            <a href="@Url.Action("Room_1", "Home")">
+                <img src="~/Images/Small_Images/room_1_sm.png" />
+            </a>
+        </td>
+        <td style="padding: 10px 10px 10px 10px">
+            <a href="@Url.Action("Room_2", "Home")">
+                <img src="~/Images/Small_Images/room_2_sm.jpg" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 10px 10px 10px 10px">
+            <a href="@Url.Action("Room_3", "Home")">
+                <img src="~/Images/Small_Images/room_3_sm.jpg" />
+            </a>
+        </td>
+        <td style="padding: 10px 10px 10px 10px">
+            <a href="@Url.Action("Room_4", "Home")">
+                <img src="~/Images/Small_Images/room_4_sm.jpg" />
+            </a>
+        </td>
+    </tr>
+</table>
+

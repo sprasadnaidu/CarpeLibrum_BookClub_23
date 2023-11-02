@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Carpe Librum Online BookClub</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header class="container-fluid" style="background-color: #cfcfcf">
+        <center>
+            <img src="~/Images/carpe_librum_banner_large.png" width="1200" height="200" class="img-responsive" />
+        </center>
+    </header>
+    @*NAVIGATION SECTION*@
+    
+    <div class="navbar navbar-default bg-3">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Currently Reading", "ReadingBook", "Home")</li>
+                    <li>@Html.ActionLink("Our Bookshelf", "OurBooks", "Home")</li>
+                    <li>@Html.ActionLink("Audio Books", "AudioBooks", "Home")</li>
+                    <li>@Html.ActionLink("Meetings", "Meetings", "Home")</li>
+                    <li>@Html.ActionLink("Membership Fees", "Fees", "Home")</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    @* MAIN BODY *@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @* FOOTER SECTION *@
+    <footer class="container-fluid text-center bg-3">
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="@Url.Content("~/Documents/Carpe_Librum_Privacy.pdf")">Privacy Policy</a> | 
+                <a href="@Url.Content("~/Documents/Carpe_Librum_terms_conditions.pdf")">Terms of Use</a>
+            </div>
+            <div class="col-sm-4">
+                Carpe Librum Online BookClub -
+                <span class="glyphicon glyphicon-copyright-mark"></span>
+                @DateTime.Now.Year All rights reserved 
+            </div>
+            <div class="col-sm4">
+                @Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, new { @class = "body" })
+                @Html.ActionLink("Map Location", "MapLocation", "Home", new { area = "" }, new { @class = "body" })
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

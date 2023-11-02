@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Fees";
+}
+
+<h2 style="text-align:center">Membership Fees</h2>
+
+<table class="center-block table-responsive" width="700px">
+    <tr>
+        <td style="font-weight: bold; font-size: large; padding: 0px 4px 20px 10px;">Membership Duration</td>
+        <td style="font-weight: bold; font-size: large; padding: 0px 4px 20px 10px;">Membership Price</td>
+    </tr>
+    <tr>
+        <td class="alert-info text-center">3 Months</td>
+        <td class="text-center">£10.00</td>
+    </tr>
+    <tr>
+        <td class="alert-warning text-center">6 Months</td>
+        <td class="text-center">£15.00</td>
+    </tr>
+    <tr>
+        <td class="alert-success text-center">12 Months</td>
+        <td class="text-center">£20.00</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="alert-danger text-center">@Html.ActionLink("Save", "ConvertPDF", "Home")</td>
+    </tr>
+</table>

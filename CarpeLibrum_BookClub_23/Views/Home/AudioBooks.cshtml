@@ -1,0 +1,44 @@
+﻿@*IEnumerable is used to iterate through the list*@
+@model IEnumerable<CarpeLibrum_BookClub_23.Models.Sound>
+@{
+    ViewBag.Title = "AudioBooks";
+}
+
+<script>
+    function pausAll(element)
+    {
+        $("audio").not(element).each(function (index, audio) {
+            audio.pause();
+        });
+    }
+</script>
+
+<div class="container-fluid">
+    <h2 class="text-center">Audio Books</h2>
+    <br />
+    <table id="dataTable" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Play Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                //at every iteration a new row is created
+                <tr>
+                    @*the name of the sound will be displayed here*@
+                    <td>@item.Name</td>
+                    @*for each sound the audio html tag is used to display the audio file using the path to the Sounds folder*@
+                    <td>
+                        <audio controls onplay="pauseAll(this)"> @*using the onplay event to call the pauseAll() function*@
+                            <source src="@Url.Content(item.FilePath)" type="audio/mp3" />
+                        </audio>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

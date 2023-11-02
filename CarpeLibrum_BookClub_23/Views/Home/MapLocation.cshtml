@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "MapLocation";
+}
+
+<h2>Map Location</h2>
+
+<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+    <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+    <script>
+(function () {
+        var setting = {"query":"Glasgow, UK","width":778,"height":668,"satellite":false,"zoom":12,"placeId":"ChIJ685WIFYViEgRHlHvBbiD5nE","cid":"0x71e683b805ef511e","coords":[55.86167039999999,-4.2583345],"lang":"en","queryString":"Glasgow, UK","centerCoord":[55.86167039999999,-4.2583345],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"1001342"};
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://1map.com/js/script-for-user.js?embed_id=1001342';
+        s.async = true;
+        s.onload = function (e) {
+          window.OneMap.initMap(setting)
+        };
+        var to = d.getElementsByTagName('script')[0];
+        to.parentNode.insertBefore(s, to);
+      })();</script><a href="https://1map.com/map-embed">1 Map</a>
+</div>
+
+<input type="button" value="Print" onclick="window.print();" />
+
