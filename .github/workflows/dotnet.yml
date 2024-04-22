@@ -22,7 +22,7 @@ jobs:
      #   dotnet-version: '4.7.2'
 
     - name: Restore NuGet packages
-      run: nuget restore YourSolution.sln
+      run: nuget restore CarpeLibrum_BookClub_23.sln
 
  #   - name: Build
  #     run: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release CarpeLibrum_BookClub_23\CarpeLibrum_BookClub_23.csproj
