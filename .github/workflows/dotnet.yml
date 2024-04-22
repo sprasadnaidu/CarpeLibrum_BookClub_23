@@ -25,4 +25,4 @@ jobs:
       run: nuget restore CarpeLibrum_BookClub_23.sln
 
     - name: Build
-      run: msbuild /p:Configuration=Release CarpeLibrum_BookClub_23.sln
+      run: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe /p:Configuration=Release CarpeLibrum_BookClub_23.sln
