@@ -30,8 +30,8 @@ jobs:
  #   - name: Setup MSBuild
   #    uses: microsoft/setup-msbuild@v1.0.0
 
-    - name: Build
-      run: MSBuild /p:Configuration=Release /p:Platform="Any CPU" .\CarpeLibrum_BookClub_23\CarpeLibrum_BookClub_23.csproj
+ #   - name: Build
+  #    run: MSBuild /p:Configuration=Release /p:Platform="Any CPU" .\CarpeLibrum_BookClub_23\CarpeLibrum_BookClub_23.csproj
 
 #    - name: Publish
 #      run: MSBuild /t:Publish /p:Configuration=Release /p:Platform="Any CPU" YourProject.csproj /p:PublishDir=bin\Publish\
